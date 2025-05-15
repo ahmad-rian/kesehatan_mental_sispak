@@ -18,13 +18,13 @@ class AddAllowedEmail extends Command
         $email = $this->argument('email');
         $createUser = $this->option('create-user');
 
-        // Validasi email format
+
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $this->error("Invalid email format: {$email}");
             return 1;
         }
 
-        // Tambah ke whitelist
+
         $allowedEmail = AllowedEmail::firstOrCreate(['email' => $email]);
 
         if ($allowedEmail->wasRecentlyCreated) {
@@ -33,7 +33,7 @@ class AddAllowedEmail extends Command
             $this->warn("Email {$email} already in admin whitelist");
         }
 
-        // Opsi untuk langsung buat user admin
+
         if ($createUser) {
             $existingUser = User::where('email', $email)->first();
 

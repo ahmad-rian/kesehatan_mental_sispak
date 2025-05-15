@@ -39,27 +39,27 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
-    // Perbaiki method hasRole dengan safe checking
+
     public function hasRole($role)
     {
         return $this->role && $this->role->name === $role;
     }
 
-    // Check if user is admin
+
     public function isAdmin()
     {
         return $this->hasRole('admin');
     }
 
-    // Method untuk mendapatkan avatar URL
+
     public function getAvatarUrlAttribute()
     {
         if ($this->avatar) {
-            // Jika sudah full URL (dari Google), return as is
+
             if (filter_var($this->avatar, FILTER_VALIDATE_URL)) {
                 return $this->avatar;
             }
-            // Jika local file, tambahkan storage path
+
             return asset('storage/' . $this->avatar);
         }
         return null;
