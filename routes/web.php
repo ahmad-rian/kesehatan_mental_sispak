@@ -20,7 +20,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         })->name('dashboard');
 
         Route::get('admin/dashboard', function () {
-            return Inertia::render('dashboard');
+            return Inertia::render('admin/dashboard');
         })->name('admin.dashboard');
     });
 });

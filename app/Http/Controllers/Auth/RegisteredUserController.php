@@ -12,15 +12,16 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Inertia\Inertia;
 use Inertia\Response;
+use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 class RegisteredUserController extends Controller
 {
     /**
      * Show the registration page.
      */
-    public function create(): Response
+    public function create(): RedirectResponse
     {
-        return Inertia::render('auth/register');
+        return redirect()->route('login')->with('info', 'Registration is currently disabled. Please login with your existing account.');
     }
 
     /**
@@ -30,22 +31,6 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|lowercase|email|max:255|unique:'.User::class,
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        event(new Registered($user));
-
-        Auth::login($user);
-
-        return to_route('dashboard');
+        return redirect()->route('login')->with('error', 'Registration is not allowed. Please contact administrator if you need access.');
     }
 }

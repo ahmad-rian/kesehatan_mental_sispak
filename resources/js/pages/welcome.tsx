@@ -196,11 +196,11 @@ export default function Welcome({ auth, status, error, info }: WelcomeProps) {
                             variants={itemVariants}
                         >
                             <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">
-                                Sistem Kesehatan Mental
+                                Sistem Cek Kesehatan Mental
                             </span>
                             <br />
                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                Terpadu
+                            Backward Chaining
                             </span>
                         </motion.h1>
                         

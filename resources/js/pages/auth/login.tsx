@@ -153,6 +153,12 @@ export default function Login({ status, error }: LoginProps) {
                         >
                             Universitas Jenderal Soedirman
                         </motion.p>
+                        <motion.div 
+                            className="mt-3 inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full"
+                            variants={itemVariants}
+                        >
+                            <span className="text-sm font-semibold text-blue-700">Single Sign-On</span>
+                        </motion.div>
                     </div>
                 </motion.div>
 
@@ -180,6 +186,7 @@ export default function Login({ status, error }: LoginProps) {
                             <p className="mt-3 text-gray-600 leading-relaxed">
                                 Masuk dengan akun Google Anda untuk mengakses sistem
                             </p>
+                            
                         </motion.div>
                         
                         <motion.div className="space-y-8" variants={itemVariants}>
@@ -307,7 +314,7 @@ export default function Login({ status, error }: LoginProps) {
                                 <p className="text-sm text-gray-600">
                                     Butuh bantuan?{' '}
                                     <motion.a
-                                        href="mailto:support@unsoed.ac.id"
+                                        href="mailto:ahmad.ritonga@unsoed.ac.id"
                                         className="font-semibold text-blue-600 hover:text-blue-700 underline underline-offset-4 decoration-blue-300 hover:decoration-blue-500 transition-colors"
                                         whileHover={{ scale: 1.05 }}
                                         transition={{ type: "spring", stiffness: 400 }}

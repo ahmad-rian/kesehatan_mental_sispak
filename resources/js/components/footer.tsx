@@ -29,35 +29,7 @@ export default function Footer() {
                             Platform konsultasi dan monitoring kesehatan mental untuk mendukung 
                             kesejahteraan psikologis mahasiswa Universitas Jenderal Soedirman.
                         </p>
-                        <div className="flex space-x-4">
-                            <a
-                                href="#"
-                                className="text-gray-400 hover:text-white transition-colors"
-                            >
-                                <span className="sr-only">Facebook</span>
-                                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                                </svg>
-                            </a>
-                            <a
-                                href="#"
-                                className="text-gray-400 hover:text-white transition-colors"
-                            >
-                                <span className="sr-only">Instagram</span>
-                                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path fillRule="evenodd" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.987 11.987s11.987-5.367 11.987-11.987C24.003 5.367 18.636.001 12.017.001zM8.461 12.017c0-1.963 1.593-3.556 3.556-3.556s3.556 1.593 3.556 3.556-1.593 3.556-3.556 3.556-3.556-1.593-3.556-3.556zm7.679-4.171c0-.579.469-1.048 1.048-1.048s1.048.469 1.048 1.048-.469 1.048-1.048 1.048-1.048-.469-1.048-1.048zm-2.584-1.519c-1.319 0-2.584.424-3.556 1.209-.972.785-1.556 1.888-1.556 3.105s.584 2.32 1.556 3.105c.972.785 2.237 1.209 3.556 1.209s2.584-.424 3.556-1.209c.972-.785 1.556-1.888 1.556-3.105s-.584-2.32-1.556-3.105c-.972-.785-2.237-1.209-3.556-1.209z" clipRule="evenodd" />
-                                </svg>
-                            </a>
-                            <a
-                                href="#"
-                                className="text-gray-400 hover:text-white transition-colors"
-                            >
-                                <span className="sr-only">YouTube</span>
-                                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                </svg>
-                            </a>
-                        </div>
+                        
                     </div>
 
                     {/* Quick Links */}
