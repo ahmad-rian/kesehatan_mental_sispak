@@ -1,4 +1,4 @@
-// Alternatif 1: Minimalist dengan ikon lebih simpel
+
 import { CircleDot, Heart } from 'lucide-react';
 
 const MinimalistIcon = ({ className = "" }) => (
@@ -14,17 +14,7 @@ const MinimalistIcon = ({ className = "" }) => (
     </div>
 );
 
-// Alternatif 2: Menggunakan ikon waves untuk ketenangan
-import { Waves, Sparkles } from 'lucide-react';
 
-const CalmIcon = ({ className = "" }) => (
-    <div className={`relative ${className}`}>
-        <div className="w-full h-full bg-gradient-to-br from-blue-400 via-teal-400 to-green-400 rounded-xl flex items-center justify-center overflow-hidden">
-            <Waves className="w-4 h-4 text-white" strokeWidth={2} />
-            <Sparkles className="w-2 h-2 text-white absolute top-1 right-1" strokeWidth={3} />
-        </div>
-    </div>
-);
 
 export default function AppLogo() {
     return (
