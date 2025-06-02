@@ -200,7 +200,7 @@ export default function Welcome({ auth, status, error, info }: WelcomeProps) {
                             </span>
                             <br />
                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Backward Chaining
+                            Forward Chaining
                             </span>
                         </motion.h1>
                         

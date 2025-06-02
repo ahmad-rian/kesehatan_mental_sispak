@@ -27,7 +27,7 @@ class AdminDashboardController extends Controller
         $recentActivity = $this->getRecentActivity();
         $chartData = $this->getChartData();
 
-        return Inertia::render('Admin/Dashboard', [
+        return Inertia::render('Admin/dashboard', [
             'stats' => $stats,
             'recent_activity' => $recentActivity,
             'chart_data' => $chartData,

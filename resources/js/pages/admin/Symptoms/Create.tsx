@@ -254,24 +254,28 @@ export default function SymptomCreate({ categories }: SymptomCreateProps) {
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-3">
-                                {Object.entries(categories).map(([key, category]) => {
-                                    const Icon = getCategoryIcon(key);
-                                    const color = getCategoryColor(key);
-                                    
-                                    return (
-                                        <div key={key} className="flex items-center justify-between">
-                                            <div className="flex items-center space-x-2">
-                                                <Icon className="h-4 w-4" />
-                                                <Badge className={color}>
-                                                    {category.title}
-                                                </Badge>
+                                {categories && Object.entries(categories).length > 0 ? (
+                                    Object.entries(categories).map(([key, category]) => {
+                                        const Icon = getCategoryIcon(key);
+                                        const color = getCategoryColor(key);
+
+                                        return (
+                                            <div key={key} className="flex items-center justify-between">
+                                                <div className="flex items-center space-x-2">
+                                                    <Icon className="h-4 w-4" />
+                                                    <Badge className={color}>
+                                                        {category.title}
+                                                    </Badge>
+                                                </div>
+                                                <span className="text-xs text-muted-foreground">
+                                                    {category.symptoms.length} gejala
+                                                </span>
                                             </div>
-                                            <span className="text-xs text-muted-foreground">
-                                                {category.symptoms.length} gejala
-                                            </span>
-                                        </div>
-                                    );
-                                })}
+                                        );
+                                    })
+                                ) : (
+                                    <span className="text-xs text-muted-foreground">Belum ada data kategori.</span>
+                                )}
                             </CardContent>
                         </Card>
 
